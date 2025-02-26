@@ -1,11 +1,15 @@
 import initialState from '../data'
+import { useState } from 'react'
 
 export default function List() {
-    console.log(initialState)
+    const [task, setTask] = useState('');
     return (
             <div>
-                <input />
-                <button>add task</button>
+                <input value={task} onChange={e => setTask(e.target.value)} />
+                console.log(task)
+                <button onClick={() => {
+                    setTask('')
+                }}>add task</button>
                 <ul>
                     {initialState.map(test => (
                         <li>
