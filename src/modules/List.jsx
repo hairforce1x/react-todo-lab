@@ -10,7 +10,11 @@ export default function List() {
             </div>
             <div>
                 <ul>
-                    <li></li>
+                    {initialState.map(test => (
+                        <li>
+                            {test.title}
+                        </li>
+                    ))}
                 </ul>
             </div>
             
